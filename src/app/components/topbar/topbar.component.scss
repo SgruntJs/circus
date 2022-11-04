@@ -1,6 +1,7 @@
+@import "../../../assets/styles/variables.scss";
 .topbar-wrapper {
 
-    background-color: #333;;
+    background-color: $black;
     &__logo {
         font-family: 'Fredericka the Great', cursive;
         color: red;
