@@ -8,7 +8,7 @@
   background-position: center center;
   background-blend-mode: color-dodge;
   min-height: 100%;
-  height: calc(100vh - 116px);
+  height: calc(100vh);
   background-size: 60%;
   position: relative;
   z-index: 1;
@@ -23,5 +23,9 @@
     filter: grayscale(100%);
     z-index: 0;
     opacity: 0.9;
+
+    a {
+      color: red;
+  }
   }
 }

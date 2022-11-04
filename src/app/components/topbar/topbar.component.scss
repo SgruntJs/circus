@@ -1,9 +1,22 @@
 @import "../../../assets/styles/variables.scss";
 .topbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: $black;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1rem;
+  color: white;
 
-    background-color: $black;
-    &__logo {
-        font-family: 'Fredericka the Great', cursive;
-        color: red;
-    }
+  &__logo {
+    font-family: "Fredericka the Great", cursive;
+    color: red;
+  }
+  a {
+   color: $azure;
+    
+  }
+  &__info {
+    font-size: .9rem;
+  }
+
 }
