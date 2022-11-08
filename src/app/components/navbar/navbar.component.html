@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-circus">
+<nav class="navbar navbar-expand-lg navbar-circus" #navbar>
     <!-- Container wrapper -->
     <div class="container-fluid">
       <!-- Toggle button -->
@@ -17,9 +17,9 @@
       <!-- Collapsible wrapper -->
       <div mdbCollapse #collapse="mdbCollapse" class="collapse navbar-collapse" id="navbarExample4">
         <!-- Left links -->
-        <ul class="navbar-nav me-auto ps-lg-0" style="padding-left: 0.15rem">
+        <ul class="navbar-nav me-auto ps-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Regular link</a>
+            <span class="nav-link" routerLink="/home">Home Page</span>
           </li>
           <!-- Navbar dropdown -->
           <li class="nav-item dropdown position-static">
@@ -31,7 +31,7 @@
               role="button"
               [attr.aria-expanded]="menuExpanded"
             >
-              Mega menu
+              Snippets
             </a>
             <!-- Dropdown menu -->
             <div

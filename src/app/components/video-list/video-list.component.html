@@ -1,0 +1,16 @@
+<div class="component">
+    <h2>Video list component</h2>
+    <div *ngIf="currentChannel != null">
+        <p>Video del canale {{currentChannel.name}}</p>
+        <!-- <ul *ngIf="videoList != null && videoList.length > 0">
+            <li *ngFor="let video of videoList">
+                <div><b>{{video.title}}</b></div>
+                <div><i>{{video.url}}</i></div>
+            </li>
+        </ul> -->
+        {{currentChannel.title}}
+        <p *ngIf="videoList?.length == 0">
+            nessun video trovato nel canale <b>{{currentChannel.name}}</b>
+        </p>
+    </div>
+</div>

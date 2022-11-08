@@ -1,0 +1,10 @@
+<div class="component">
+    <h2>Channel list cmpt</h2>
+    <p>Channels</p>
+    <ul>
+        <li *ngFor="let channel of channels$ | async">
+            <div><a (click)="selectChannelCommand(channel)"><b>{{channel.title}}</b></a></div>
+            <div><i>{{channel.url}}</i></div>
+        </li>
+    </ul>
+</div>

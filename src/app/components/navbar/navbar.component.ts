@@ -1,12 +1,18 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   menuExpanded = false;
+  @ViewChild('navbar') navbar!: ElementRef
+
+  ngOnInit() {
+
+  }
+
 
   toggleMenu() {
     setTimeout(() => {
@@ -24,5 +30,9 @@ export class NavbarComponent {
 
     this.menuExpanded = false;
   };
+
+  @HostListener('window:scroll', ['$event']) onScrollEvent($event: Event) {
+    this.navbar.nativeElement.classList.toggle("sticky", window.scrollY > 0);
+  }
 
 }

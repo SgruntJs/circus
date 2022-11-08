@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,13 +26,19 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TopbarComponent } from './components/topbar/topbar.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
+import { ChannelListComponent } from './components/channel-list/channel-list.component';
+import { VideoListComponent } from './components/video-list/video-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    TopbarComponent
+    TopbarComponent,
+    HomepageComponent,
+    ChannelListComponent,
+    VideoListComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +60,7 @@ import { TopbarComponent } from './components/topbar/topbar.component';
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
